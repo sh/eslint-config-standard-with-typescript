@@ -22,7 +22,7 @@ interface PkgDetails {
 }
 
 const getPkgDetails = async (): Promise<PkgDetails> => {
-  const readPkgUp: typeof import('read-pkg-up')['readPackageUpAsync'] = (await inclusion('read-pkg-up')).readPackageUpAsync
+  const readPkgUp: typeof import('read-pkg-up')['readPackageUp'] = (await inclusion('read-pkg-up')).readPackageUp
   const readResult = await readPkgUp()
   if (readResult === undefined) { throw new Error() }
   const ourPkg = readResult.packageJson
@@ -238,7 +238,8 @@ test('Exported rule values do not reference eslint-config-standard ones', (t) =>
 test('npm install args in readme satisfy peerDeps', async (t) => {
   const { pkgJson, pkgPath, ourPeerDeps } = await getPkgDetails()
   const readme = await (await readFile(resolve(pkgPath, '..', 'readme.md'))).toString()
-  const match = readme.match(/```\n(npm install .*?)```/s)
+  // console.log('readme', readme)
+  const match = readme.match(/```\r\n(npm install .*?)```/s)
   if (match === null) throw new Error()
   if (match.length === 0) throw new Error('failed to find code block')
   if (match.length > 2) throw new Error('matched multiple code blocks')

@@ -16,11 +16,11 @@ because your decisions regarding version ranges and range specifiers may vary.
 ```
 npm install --save-dev \
   typescript@\* \
-  eslint@^7.12.1 \
-  eslint-plugin-promise@^5.0.0 \
-  eslint-plugin-import@^2.22.1 \
-  eslint-plugin-node@^11.1.0 \
-  @typescript-eslint/eslint-plugin@^4.0.1 \
+  eslint@^8.0.1 \
+  eslint-plugin-promise@^6.0.0 \
+  eslint-plugin-import@^2.25.2 \
+  eslint-plugin-n@^14.0.0 \
+  @typescript-eslint/eslint-plugin@^5.0.0 \
   eslint-config-standard-with-typescript@latest
 ```
 
@@ -38,11 +38,11 @@ Here is an example `.eslintrc.js`:
 
 ```js
 module.exports = {
-  extends: 'standard-with-typescript',
+  extends: "standard-with-typescript",
   parserOptions: {
-    project: './tsconfig.json'
-  }
-}
+    project: "./tsconfig.json",
+  },
+};
 ```
 
 Note: Please read some important instructions regarding the `project` option [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration).
