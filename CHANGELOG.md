@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [21.0.2](https://github.com/standard/eslint-config-standard-with-typescript/compare/v21.0.1...v21.0.2) (2022-01-10)
+
+
+### Bug Fixes
+
+* peer-depend on any version of typescript ([3446e30](https://github.com/standard/eslint-config-standard-with-typescript/commit/3446e30dacdf019ee08f16b430cee876797a3a0c)), closes [#604](https://github.com/standard/eslint-config-standard-with-typescript/issues/604)
+
 ### [21.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v21.0.0...v21.0.1) (2021-08-31)
 
 ## [21.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v20.0.0...v21.0.0) (2021-08-29)
